@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs'); -%>
+<div class="insert">
+    <div class="insertBox">
+        <form action="/add" method="POST">
+            <div>
+                <label for="insertBook">Insert Book Name</label>
+                <div>
+                    <input class="box" type="text" name="name" id="insertBook" required/>
+                </div>
+            </div>
+            <div>
+                <label for="insertAuthor">Insert Book Author</label>
+                <div class="box">
+                    <input class="box" type="text" name="author" id="insertAuthor" required/>
+                </div>
+            </div>
+            <div>
+                <label for="insertIsbn">Insert Book ISBN</label>
+                <div class="box">
+                    <input class="box" type="text" name="isbn" id="insertIsbn" required/>
+                </div>
+            </div>
+            <div>
+                <label for="insertRating">Insert Book Rating</label>
+                <div class="box">
+                    <input class="box" type="text" name="rating" id="insertRating" required min="1" max="10"/>
+                </div>
+            </div>
+            <div>
+                <label for="insertReview">Insert Book Review</label>
+                <div class="box">
+                    <input class="box" type="text" name="review" id="insertReview" required/> 
+                </div>
+            </div>
+            <div >
+                <label for="insertDate">Date Finished Reading</label>
+                <div>
+                    <input class="box" type="text" name="date" id="insertDate" required/>
+                </div>
+    
+            </div>
+            <div>
+                <input id="add-button" class="button" type="submit" value="Add"/>
+            </div>
+    
+        </form>
+    </div>
+
+</div>
+
+
+
+ <%- include('partials/footer.ejs'); -%>

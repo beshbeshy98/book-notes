@@ -1,0 +1,56 @@
+<%- include('partials/header.ejs'); -%>
+<div class="insert">
+  <div class="insertBox">
+    <form action="/update" method="POST">
+      <input type="hidden" name="editedBookId" value="<%= bookId%>"/>
+      <div>
+        <label for="insertBook">Insert Book Name</label>
+        <div>
+                <input class="box" type="text" name="name" id="insertBook" />
+        </div>
+      </div>
+      <div>      
+        <label for="insertAuthor">Insert Book Author</label>
+
+        <div>
+          
+      <input class="box" type="text" name="author" id="insertAuthor" />
+        </div>
+      </div>
+
+      <div>  
+      <label for="insertIsbn">Insert Book ISBN</label>
+        <div>
+                <input class="box" type="text" name="isbn" id="insertIsbn"/>
+        </div>
+      </div>
+      <div>
+              <label for="insertRating">Insert Book Rating</label>
+        <div>
+                <input class="box" type="text" name="rating" id="insertRating" />
+        </div>
+      </div>
+      <div>      
+        <label for="insertReview">Insert Book Review</label>
+        <div>
+                <input class="box" type="text" name="review" id="insertReview" />
+        </div>
+      </div>
+      <div>     
+         <label for="insertDate">Date Finished Reading</label>
+        <div>
+                <input class="box" type="text" name="date" id="insertDate" />
+        </div>
+      </div>
+      <div>
+              <input class="button" type="submit" value="Update"/>
+      </div>
+
+    </form>
+  </div>
+
+
+</div>
+
+
+<%- include('partials/footer.ejs'); -%>

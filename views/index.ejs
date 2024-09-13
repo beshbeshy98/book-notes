@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs'); -%>
+
+    <% if (books.length !== 0) { %>
+        <% books.forEach(book => { %>
+            <div id="container">
+                <div id="post">
+                    <div id="left">
+                        <img src ="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" />
+                        <h2 class=".small-headline"> <%= book.book_name %> </h2>
+                        <h3 class=".small-headline"> Author: <%= book.author %> </h3>
+                    </div>
+                    <div id="right">
+                        <h4 class="small-headline"> Date finished: <%= book.date_finished %> </h4>
+                        <h5 class="small-headline"> How strongly i'd recommend it: <%= book.rating %>/10 </h5>
+                        <p class="cool-paragraph"> <%= book.review %> </p>
+                    </div>
+                </div>
+                <div id="buttons">
+                    <form action="/edit" method="POST">
+                        <input class="button" type="submit" value="Edit post">
+                        <input type="hidden" name="bookId" value="<%= book.id%>"/>
+                    </form>
+                    <form action="/delete" method="POST">
+                        <input  type="hidden" name="bookId" value="<%= book.id%>"/>
+                        <input class="button delete" type="submit" value="Delete" />
+                    </form>
+                </div>
+            </div>
+
+
+                <% }) %>
+
+    <% } %>
+
+<%- include('partials/footer.ejs'); -%>
